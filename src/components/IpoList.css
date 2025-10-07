@@ -1,0 +1,62 @@
+.ipo-list-page {
+  padding: 20px;
+}
+
+.ipo-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.ipo-table th, .ipo-table td {
+  padding: 16px;
+  text-align: left;
+}
+
+.ipo-table thead {
+  background: #f4f5f8;
+  font-weight: 600;
+}
+
+.company-cell {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.company-logo {
+  width: 90px;
+  height: 90px;
+}
+
+.company-name {
+  font-weight: 600;
+  text-decoration: none;
+  color: #002b5b;
+}
+
+.issue-date {
+  color: #555;
+  font-size: 0.85rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .ipo-table thead {
+    display: none;
+  }
+  .ipo-table tr {
+    display: block;
+    margin-bottom: 20px;
+    background: white;
+    border-radius: 8px;
+    padding: 10px;
+  }
+  .ipo-table td {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px;
+  }
+}

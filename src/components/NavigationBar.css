@@ -1,0 +1,24 @@
+.breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.95rem;
+  color: #555;
+  margin: 20px 0;
+  padding-left: 10px;
+}
+
+.crumb {
+  text-decoration: none;
+  color: #0a2db1;
+  font-weight: 500;
+}
+
+.crumb.active {
+  color: #222;
+  font-weight: 600;
+}
+
+.divider {
+  color: #999;
+}

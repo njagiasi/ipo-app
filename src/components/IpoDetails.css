@@ -1,0 +1,287 @@
+.ipo-details-page {
+  padding: 20px;
+  background: #f9fafc;
+}
+
+.ipo-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: white;
+  border-radius: 10px;
+  padding: 15px 20px;
+  margin-bottom: 20px;
+}
+
+.back-btn {
+  font-size: 20px;
+  text-decoration: none;
+  color: #222;
+}
+
+.detail-logo {
+  width: 50px;
+  margin-right: 10px;
+}
+
+.ipo-header-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.apply-btn {
+  background: #0a2db1;
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+
+/* IPO Details Section */
+.ipo-details-section, .ipo-timeline, .about-company {
+  margin-top: 2rem;
+  background: #fff;
+  border-radius: 12px;
+  padding: 20px 24px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+}
+
+.ipo-details-section h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #1f1f1f;
+  margin-bottom: 1rem;
+}
+
+.ipo-details-card {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.2rem 2rem;
+  padding: 8px 0;
+}
+
+.ipo-detail-item h4 {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #6b7280;
+  margin-bottom: 4px;
+}
+
+.ipo-detail-item p {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #111827;
+}
+
+.ipo-detail-item p strong {
+  color: #111827;
+}
+
+.loss-text {
+  color: #e63946; /* red for negative */
+  font-weight: 600;
+}
+
+/* Make lines shorter for spacing */
+.timeline-step:not(:last-child)::after {
+  background: #28a745 !important;
+  content: "";
+  position: absolute;
+  top: 15px;
+  right: -50%;
+  width: 100%;
+  height: 2px;
+  z-index: 1;
+}
+
+.timeline-step.completed:not(:last-child)::after {
+  background: #28a745;
+} */
+
+
+.about-company {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  margin-top: 20px;
+}
+
+.download-btn {
+  background-color: #3b82f6;
+  border: none;
+  color: white;
+  font-weight: 600;
+  padding: 8px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+  margin-right: 10px;
+}
+
+.download-btn:hover {
+  background-color: #2563eb;
+}
+
+/* Hide these elements ONLY during PDF creation */
+.pdf-mode .breadcrumb,
+.pdf-mode .apply-btn,
+.pdf-mode .download-btn,
+.pdf-mode .back-btn {
+  display: none !important;
+}
+
+/* Timeline container */
+.timeline-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  position: relative;
+  margin-top: 20px;
+  flex-wrap: wrap; /* Allow steps to wrap on smaller screens */
+}
+
+/* Each step */
+.timeline-step {
+  text-align: center;
+  position: relative;
+  flex: 1 1 100px; /* Allow flexible width */
+  min-width: 120px;
+  margin-bottom: 40px;
+}
+
+/* Icon */
+.timeline-icon {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 2px solid #ccc;
+  background-color: #fff;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  color: #999;
+  z-index: 2;
+  position: relative;
+}
+
+/* Connector line */
+.timeline-line {
+  position: absolute;
+  top: 16px;
+  left: 50%;
+  width: 100%;
+  height: 2px;
+  background: #ccc;
+  z-index: 1;
+}
+
+/* Completed & active states */
+.timeline-step.completed .timeline-icon {
+  background-color: #28a745;
+  border-color: #28a745;
+  color: white;
+}
+.timeline-step.active .timeline-icon {
+  border-color: #007bff;
+  color: #007bff;
+}
+
+/* Step labels */
+.step-label {
+  margin-top: 10px;
+  font-weight: 600;
+  color: #333;
+}
+
+.step-date {
+  color: #666;
+  font-size: 12px;
+}
+
+/* Horizontal connectors for desktop */
+.timeline-step:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  top: 16px;
+  right: -50%;
+  width: 100%;
+  height: 2px;
+  background: #ccc;
+  z-index: 1;
+}
+.timeline-step.completed:not(:last-child)::after {
+  background: #28a745;
+}
+
+/* RESPONSIVE: vertical timeline for tablets/mobile */
+@media (max-width: 768px) {
+
+  .ipo-timeline, .about-company {
+  margin-top: 0;
+  background: none;
+  border-radius: 0;
+  padding: 0;
+  box-shadow: none;
+}
+  .timeline-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .timeline-step {
+    display: flex;
+    flex-wrap: wrap; /* allow label/date to move under icon if needed */
+    align-items: center;
+    position: relative;
+    margin-bottom: 30px;
+  }
+
+  .timeline-icon {
+    order: 1; /* always first */
+    flex-shrink: 0;
+    margin-right: 10px;
+    margin: 0;
+  }
+
+  .timeline-line{
+    display: none;
+  }
+
+  .step-label {
+    order: 2; /* comes after icon */
+    margin: 10px;
+    font-weight: 600;
+    color: #333;
+  }
+
+  .step-date {
+    order: 3; /* below label */
+    width: 100%; /* force below label */
+    font-size: 12px;
+    color: #666;
+    height: 50px;
+    text-align: center;
+    margin-right: 150px;
+  }
+
+  /* vertical connector line */
+  .timeline-step:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    top: 32px; /* below the icon */
+    left: 16px;
+    width: 2px;
+    height: calc(100% + 10px);
+    background: #28a745;
+  }
+}
+
+
+
+
+
