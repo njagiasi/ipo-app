@@ -128,7 +128,7 @@ const IpoDetails = () => {
             { label: "Listing date", date: "21 Dec 2023" },
           ].map((step, index, arr) => {
             // Mark completed, active, and upcoming steps
-            const activeStep = 6; // You can change this value dynamically later
+            const activeStep = 6; // This can be change this value dynamically later
             const status =
               index < activeStep
                 ? "completed"

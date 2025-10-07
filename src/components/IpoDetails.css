@@ -80,10 +80,6 @@
   color: #111827;
 }
 
-.loss-text {
-  color: #e63946; /* red for negative */
-  font-weight: 600;
-}
 
 /* Make lines shorter for spacing */
 .timeline-step:not(:last-child)::after {
